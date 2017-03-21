@@ -51,6 +51,7 @@
     "go": {
         "repository": "library",
         "image": "golang",
+        "entrypoint": "go",
         "executable": "go",
         "volumes": {
             "gopath": "/gopath"
