@@ -1,0 +1,62 @@
+{
+    "jq": {
+        "repository": "dlacewell",
+        "image": "jq",
+        "executable": "jq",
+        "binds": {
+            "data": "/data"
+        }
+    },
+    "nim": {
+        "repository": "nimlang",
+        "image": "nim",
+        "executable": "nim",
+        "entrypoint": "nim",
+        "cwd": "/usr/src/app",
+        "mountPwd": true
+    },
+    "nimble": {
+        "repository": "nimlang",
+        "image": "nim",
+        "executable": "nimble",
+        "entrypoint": "nimble",
+        "binds": {
+            "nimble": "/root/.nimble"
+        }
+    },
+    "weechat": {
+        "repository": "dlacewell",
+        "image": "weechat",
+        "executable": "weechat",
+        "binds": {
+            "weechat": "/volume"
+        }
+    },
+    "mono": {
+        "repository": "library",
+        "image": "mono",
+        "executable": "mono",
+        "entrypoint": "mono",
+        "cwd": "/mnt",
+        "mountPwd": true
+    },
+    "mcs": {
+        "repository": "library",
+        "image": "mono",
+        "executable": "mcs",
+        "entrypoint": "mcs",
+        "cwd": "/mnt",
+        "mountPwd": true
+    },
+    "go": {
+        "repository": "library",
+        "image": "golang",
+        "executable": "go",
+        "volumes": {
+            "gopath": "/gopath"
+        },
+        "binds": {
+            "~/.gitconfig": "~/.gitconfig"
+        }
+    }
+}
